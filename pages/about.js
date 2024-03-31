@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "../styles/Home.module.css"
 const About = () => {
   return (<>
-  <main className={`${styles.main}`}>
+  <main className="">
   <div> I am About</div>
   </main>
   </>

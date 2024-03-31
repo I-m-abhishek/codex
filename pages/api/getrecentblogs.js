@@ -5,9 +5,11 @@ export default async function handler(req, res) {
     try {
       const db = await connectToDatabase();
       const collection = db.collection('blogs');
-      const titles = await collection.find({}).toArray();
-      // res.status(200).json({ success: true, titles });
-      res.status(200).json(titles);
+
+      // Sort in descending order based on the timestamp and limit to 10
+      const recentBlogs = await collection.find({}).sort({ timestamp: -1 }).limit(10).toArray();
+
+      res.status(200).json(recentBlogs);
     } catch (error) {
       console.error(error);
       res.status(500).json({ success: false, error: 'Internal Server Error' });

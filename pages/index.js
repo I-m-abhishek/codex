@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,23 +16,61 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <main className={`${styles.main}`}>
-        <h1 className={styles.title}>
-          Coding Blogs
-        </h1>
-        <p className={styles.description}>
-         Where you can learn new concepts about Coding
-        </p>
+      <main>
+        <div className='bg-white'>
+        <div className='rounded-xl mx-2 bg-gradient-to-r from-slate-800 from-25% via-black/65 via-60% to-amber-700/55 flex justify-center items-center'>
+        {/* <span className='leading-normal decoration-yellow-500 text-center text-9xl font-black bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>Coding Blogs</span> */}
+        <span className='leading-normal text-center text-4xl md:text-8xl md:leading-normal sm:text-7xl sm:leading-normal lg:text-9xl lg:leading-normal font-black bg-clip-text text-white '>Coding Blogs</span>
+        </div>
         
-       <h3>best languages </h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente harum dolorum illo.</p>
-       <h3>best languages </h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente harum dolorum illo.</p> <h3>best languages </h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente harum dolorum illo.</p> <h3>best languages </h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente harum dolorum illo.</p> <h3>best languages </h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente harum dolorum illo.</p>
+         <div className='flex items-center justify-center'>
+          <p className='m- sm:mr-30 sm:ml-8 md:ml-13 md:mr-60 lg:mr-90 lg:ml-20 text-2xl text-justify m-10'>
+         Discover the world of coding at <Link className='font-bold' href="/">Coding Blogs</Link>, where knowledge meets innovation. Dive into our collection of insightful blogs that cater to all levels of expertise. From beginner-friendly tutorials to advanced programming insights, <Link className='font-bold' href="/">Coding Blogs</Link>  is your ultimate resource for staying updated, enhancing skills, and connecting with a vibrant coding community. Join us on a journey of continuous learning and exploration in the dynamic realm of coding.
+          </p>
+         </div>
+
+          <div className='flex flex-col md:flex-row bg-white'>
+             <div className='m-2'>
+            <img className='rounded' src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coding Blogs" />
+             </div>
+             <div className='m-2'>
+            <img className='rounded' src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Coding Blogs" />
+             </div>
+             </div>
+            <hr className='m-7 border-2 border-blue-500 cursor-pointer hover:border-red-500 duration-500' />
+
+         <div className=''>
+          <div className='float-left w-1/3 h-1/3 m-2 mt-5 mr-5'>
+          <img className='flex rounded-md' src="https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="coding Blogs" />
+          </div>
+
+           <div  className='m-2'>
+               <h1 className='font-bold text-center text-xl mb-2'>Learn the new way of doing coding</h1>
+               <hr className=' border-black cursor-pointer'/>
+                <p className='text-lg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi maiores enim dolor qui quaerat suscipit laboriosam quia nam, pariatur distinctio fugit expedita aliquid totam debitis vero doloribus asperiores exercitationem dignissimos porro possimus repellendus quae! Odio quam quaerat in asperiores provident pariatur itaque dolores quo, excepturi quasi porro quisquam vel, voluptatum consequatur illum earum corrupti voluptatem architecto illo inventore, ipsum doloremque sequi repellendus accusantium. Similique facilis at asperiores earum exercitationem quidem hic, eligendi maxime accusantium nisi quibusdam ea ad, tenetur officiis architecto vitae! Consectetur ex magnam consequatur inventore eum sapiente voluptatem cupiditate nobis alias corporis quia ut ducimus iste pariatur quo officiis sequi et placeat eos odio accusamus, soluta dicta? Incidunt, libero vitae. Illo non maxime asperiores omnis at harum, qui deserunt repellendus laudantium ullam sit accusantium porro impedit adipisci, facere corrupti dolorum vero alias. Minus modi impedit at eum quod illum, maiores maxime dolor neque incidunt quae repellendus perferendis non ex quia voluptas, assumenda magnam quo excepturi reiciendis ipsam, ad totam voluptatem sint? Porro, blanditiis aliquam eligendi quaerat aspernatur ipsum ipsam provident? Saepe nisi, laudantium expedita minus, maxime aliquid eligendi et fuga ipsum ut earum? Dignissimos optio tempora enim vero maiores in adipisci nulla obcaecati saepe, dicta veniam perspiciatis consectetur quibusdam repellendus molestiae a incidunt reiciendis harum facere tempore porro recusandae natus dolore eum. Dolor sit molestiae excepturi voluptate eius magni voluptatem, reprehenderit totam ut voluptates aut eaque porro numquam inventore iure vel maiores, esse culpa quod facilis cupiditate! Consequuntur officia voluptatum ducimus deserunt minima quaerat maxime sed repudiandae consectetur odit facilis impedit sequi ipsa nostrum provident, illo consequatur eum mollitia soluta id modi voluptas pariatur molestias fugiat? Quos id labore nobis laboriosam consequatur asperiores repudiandae quidem corrupti, incidunt nam dolore blanditiis voluptas illo, itaque laborum voluptates. Accusantium minima odio aliquam ab, voluptatibus quas culpa officia non, nihil molestiae officiis.</p>
+           </div>
+         </div>
+         
+         <br />
+         <div className=''>
+          <div className='float-right w-1/3 h-1/3 m-2 mt-5 ml-5'>
+          <img className='flex rounded-md' src="https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="coding Blogs" />
+          </div>
+
+           <div  className='m-2'>
+               <h1 className='font-bold text-center text-xl mb-2'>Learn the new way of doing coding</h1>
+               <hr className=' border-black cursor-pointer'/>
+                <p className='text-lg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi maiores enim dolor qui quaerat suscipit laboriosam quia nam, pariatur distinctio fugit expedita aliquid totam debitis vero doloribus asperiores exercitationem dignissimos porro possimus repellendus quae! Odio quam quaerat in asperiores provident pariatur itaque dolores quo, excepturi quasi porro quisquam vel, voluptatum consequatur illum earum corrupti voluptatem architecto illo inventore, ipsum doloremque sequi repellendus accusantium. Similique facilis at asperiores earum exercitationem quidem hic, eligendi maxime accusantium nisi quibusdam ea ad, tenetur officiis architecto vitae! Consectetur ex magnam consequatur inventore eum sapiente voluptatem cupiditate nobis alias corporis quia ut ducimus iste pariatur quo officiis sequi et placeat eos odio accusamus, soluta dicta? Incidunt, libero vitae. Illo non maxime asperiores omnis at harum, qui deserunt repellendus laudantium ullam sit accusantium porro impedit adipisci, facere corrupti dolorum vero alias. Minus modi impedit at eum quod illum, maiores maxime dolor neque incidunt quae repellendus perferendis non ex quia voluptas, assumenda magnam quo excepturi reiciendis ipsam, ad totam voluptatem sint? Porro, blanditiis aliquam eligendi quaerat aspernatur ipsum ipsam provident? Saepe nisi, laudantium expedita minus, maxime aliquid eligendi et fuga ipsum ut earum? Dignissimos optio tempora enim vero maiores in adipisci nulla obcaecati saepe, dicta veniam perspiciatis consectetur quibusdam repellendus molestiae a incidunt reiciendis harum facere tempore porro recusandae natus dolore eum. Dolor sit molestiae excepturi voluptate eius magni voluptatem, reprehenderit totam ut voluptates aut eaque porro numquam inventore iure vel maiores, esse culpa quod facilis cupiditate! Consequuntur officia voluptatum ducimus deserunt minima quaerat maxime sed repudiandae consectetur odit facilis impedit sequi ipsa nostrum provident, illo consequatur eum mollitia soluta id modi voluptas pariatur molestias fugiat? Quos id labore nobis laboriosam consequatur asperiores repudiandae quidem corrupti, incidunt nam dolore blanditiis voluptas illo, itaque laborum voluptates. Accusantium minima odio aliquam ab, voluptatibus quas culpa officia non, nihil molestiae officiis.</p>
+           </div>
+         </div>
+         
+         
+         
+         
+        
+        
   
-       
+         </div>
       </main>
     </>
   )
