@@ -59,19 +59,8 @@ export default function Home() {
         <div className='bg-white p-1  sm:p-2 sm:pl-20 sm:pr-20'>
        
         <div className='bg-white'>
-        
-        
-         
-
-          <div className='flex flex-col md:flex-row bg-white'>
-             <div className='m-2'>
-            <img className='rounded' src="./home-page-1.jpg" alt="CodeX" />
-             </div>
-             <div className='m-2'>
-            <img className='rounded' src="./home-page-2.jpg" alt="CodeX" />
-             </div>
-             </div>
-            <hr className='m-7 border-2 border-blue-500 cursor-pointer hover:border-red-500 duration-500' />
+             <p className='text-center text-2xl md:text-4xl font-semibold'>Explore Our Top Articles</p>
+            <hr className='m-7 mt-4 border-2 border-blue-500 cursor-pointer hover:border-red-500 duration-500' />
 
          <div className=''>
           <div className='float-left w-1/3 h-1/3 m-2 mt-5 mr-5'>
@@ -124,18 +113,59 @@ Remember, consistent practice and continuous learning are key to mastering compe
           </div>
 
            <div  className='m-2'>
-               <h1 className='font-bold text-center text-xl mb-2'>Learn the new way of doing coding</h1>
+           <h1 className='font-bold text-center text-xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
                <hr className=' border-black cursor-pointer'/>
-                <p className='text-lg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi maiores enim dolor qui quaerat suscipit laboriosam quia nam, pariatur distinctio fugit expedita aliquid totam debitis vero doloribus asperiores exercitationem dignissimos porro possimus repellendus quae! Odio quam quaerat in asperiores provident pariatur itaque dolores quo, excepturi quasi porro quisquam vel, voluptatum consequatur illum earum corrupti voluptatem architecto illo inventore, ipsum doloremque sequi repellendus accusantium. Similique facilis at asperiores earum exercitationem quidem hic, eligendi maxime accusantium nisi quibusdam ea ad, tenetur officiis architecto vitae! Consectetur ex magnam consequatur inventore eum sapiente voluptatem cupiditate nobis alias corporis quia ut ducimus iste pariatur quo officiis sequi et placeat eos odio accusamus, soluta dicta? Incidunt, libero vitae. Illo non maxime asperiores omnis at harum, qui deserunt repellendus laudantium ullam sit accusantium porro impedit adipisci, facere corrupti dolorum vero alias. Minus modi impedit at eum quod illum, maiores maxime dolor neque incidunt quae repellendus perferendis non ex quia voluptas, assumenda magnam quo excepturi reiciendis ipsam, ad totam voluptatem sint? Porro, blanditiis aliquam eligendi quaerat aspernatur ipsum ipsam provident? Saepe nisi, laudantium expedita minus, maxime aliquid eligendi et fuga ipsum ut earum? Dignissimos optio tempora enim vero maiores in adipisci nulla obcaecati saepe, dicta veniam perspiciatis consectetur quibusdam repellendus molestiae a incidunt reiciendis harum facere tempore porro recusandae natus dolore eum. Dolor sit molestiae excepturi voluptate eius magni voluptatem, reprehenderit totam ut voluptates aut eaque porro numquam inventore iure vel maiores, esse culpa quod facilis cupiditate! Consequuntur officia voluptatum ducimus deserunt minima quaerat maxime sed repudiandae consectetur odit facilis impedit sequi ipsa nostrum provident, illo consequatur eum mollitia soluta id modi voluptas pariatur molestias fugiat? Quos id labore nobis laboriosam consequatur asperiores repudiandae quidem corrupti, incidunt nam dolore blanditiis voluptas illo, itaque laborum voluptates. Accusantium minima odio aliquam ab, voluptatibus quas culpa officia non, nihil molestiae officiis.</p>
+                <p className='text-lg'>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:
+                <br/>
+    
+
+<strong>1.Master the Basics:</strong> Ensure you have a solid understanding of basic programming concepts such as variables, loops, conditional statements, functions, and data types in C++.
+<br />
+<strong>2.Learn Standard Template Library (STL):</strong> STL provides a rich set of data structures (like vectors, queues, stacks, sets, maps) and algorithms (like sorting, searching, and manipulating elements) that can greatly simplify coding in competitive programming.
+<br />
+<strong>3.Understand Algorithms and Data Structures:</strong> Gain proficiency in fundamental algorithms and data structures such as sorting algorithms (e.g., quicksort, mergesort), searching algorithms (e.g., binary search), dynamic programming, graph algorithms (e.g., BFS, DFS), trees, and heaps.
+
+<br />
+<strong>4.Practice Problem Solving:</strong> Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef. Start with easier problems and gradually move to more challenging ones as you build confidence.
+
+<br />
+<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures.
+
+<br />
+<strong>6.Implement Algorithms and Data Structures:</strong> Practice implementing algorithms and data structures from scratch. This helps reinforce your understanding and improves your coding skills.
+
+<br />
+<strong>7.Use Efficient Coding Techniques:</strong> Write clean, concise, and efficient code. Avoid redundant code, optimize time and space complexity, and make use of C++ language features like operator overloading, templates, and inline functions.
+
+<br />
+<strong>8.Learn Greedy and Dynamic Programming Techniques:</strong> These are two important problem-solving paradigms often used in competitive programming. Understand the principles behind greedy algorithms and dynamic programming, and practice solving problems using these techniques.
+
+<br />
+<strong>9.Participate in Contests:</strong> Take part in coding contests regularly to simulate real competition scenarios and improve your speed and accuracy in problem-solving.
+
+<br />
+<strong>10.Stay Updated and Keep Practicing:</strong> Stay updated with new algorithms, techniques, and problem-solving strategies. Keep practicing regularly to maintain and improve your skills.
+<br />
+<br />
+Remember, consistent practice and continuous learning are key to mastering competitive programming in C++. Keep challenging yourself with new problems and seek feedback to identify areas for improvement.</p>
            </div>
          </div>
          
          
          
          
+         
         
         
-         </div>
+        </div>
+
+        <div>
+          <button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl p-2 ml-2 m-5'>
+            <Link href="/blogs">Explore All Articles</Link>
+          </button>
+        </div>
+
+        
          </div>
       </main>
     </>

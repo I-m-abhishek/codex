@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from "next/link"
+// comment section add which willl require login and signup to make comment 
+// loader where ever we used loading //
+// i think we have used loading in bottom of one page and one time top of the page
 
 const Slug = () => {
   const [blogdetails, setBlogdetails] = useState({});
@@ -42,7 +45,11 @@ const Slug = () => {
   }, [slug]);
 
   if (!blogdetails || Object.keys(blogdetails).length === 0) {
-    return <div className='h-screen'>Loading...</div>;
+    return <div className='h-screen flex items-center justify-center'>
+      <div className='h-10 w-10 md:h-20 md:w-20 xl:h-24 xl:w-24 flex items-center justify-center'>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+      </div>
+    </div>;
   }
 
   return (
@@ -58,10 +65,10 @@ const Slug = () => {
 
            <div className=' flex flex-col basis-2/5  m-5'>
               <div className= 'p-1 md:p-5 flex flex-col justify-center items-center '>
-                <div className='flex justify-start w-full items-start'>
+                <div className='flex justify-start w-full items-start md:p-3 md:pt-0 md:pb-0'>
                 <span className='bg-[#a99f9f] pl-1 pr-1 md:pl-4 md:pr-4  border-spacing-4 rounded-xl p-1 font-bold text-xl'>{blogdetails.categoryTitle}</span>
                 </div>
-                <p className='text-start  font-serif text-xl text-black pt-1 md:p-3' >{blogdetails.description} </p>
+                <p className='text-start  font-serif text-xl text-black pt-1 md:p-3 ' >{blogdetails.description} </p>
                 
               </div>
               <div className='flex flex-col '>
@@ -85,8 +92,8 @@ const Slug = () => {
           
        </div>
        {/* <hr /> */}
-      <div  className='p-2 lg:p-10 pt-0 '>
-        <p className=' p-4 lg:p-10 m-1 sm:m-10  font-mono text-justify bg-gray-300/40 dark:bg-gray-800/30'>
+      <div  className='p-2 lg:p-10 lg:pb-0 pt-0 '>
+        <p className=' p-4 lg:p-10  m-1 sm:m-10  font-mono text-justify bg-gray-300/40 dark:bg-gray-800/30'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore perspiciatis ducimus iusto, illo porro aspernatur, ab aliquam, et quae temporibus eligendi facere deleniti voluptates. Voluptates non totam nostrum eius ipsum qui, impedit illo repellat maiores veritatis praesentium aut. Sint molestiae distinctio natus eius accusamus amet deserunt sapiente illum iste, dolor ab, laudantium, suscipit dolorum? Nulla officiis quae consectetur deleniti maxime quisquam quam, asperiores odio harum ipsam laboriosam voluptates error saepe id dicta quos molestias labore voluptate fugit aspernatur atque nostrum ullam sint facere. Voluptatibus sint molestiae non! Minus voluptatem ullam vero at eum dolore molestiae provident atque dolor porro, unde aliquam velit rem animi eius numquam nulla hic veritatis magnam, expedita tempora id iste fugiat delectus. Aliquid architecto, praesentium soluta reprehenderit rem quasi in quas magnam optio porro ex, omnis aut ratione corporis. At repellendus aspernatur consequuntur mollitia sapiente, sequi voluptatem placeat quae porro doloremque alias veniam ducimus. Doloremque quia vero, deleniti rem nemo ea. Impedit quis ratione expedita ipsum voluptate ex eos repudiandae, rem quisquam ut eius accusantium veritatis repellendus, blanditiis tempora explicabo cum earum officiis soluta, officia corporis. Cumque iure non veniam architecto fuga ipsa facilis. Corrupti quia voluptatibus obcaecati quo quam magnam accusantium voluptatem saepe placeat beatae minus dolore repellat eius, numquam tempora architecto debitis accusamus quis nobis nisi unde. Perspiciatis, officiis iste vel assumenda, praesentium quisquam aliquid optio ratione sequi magnam fugit magni necessitatibus eius, fuga mollitia id voluptas asperiores tenetur illum deleniti exercitationem. Atque labore nesciunt perspiciatis voluptates nihil eaque aperiam tempore vel suscipit, quis eos consectetur quos quia voluptatem sapiente ut voluptas natus. Ad consequuntur in nam deserunt fugit sint sed dolore labore laudantium temporibus, quod fugiat dignissimos doloremque optio eius eos facilis quo minima nulla sapiente id debitis consequatur aliquam. Assumenda corporis ut id. Iure voluptates, praesentium quas tempore voluptatem ad eos. Ducimus harum quas natus temporibus. Aperiam ipsam nostrum a commodi necessitatibus voluptatum mollitia dolorum reiciendis, sit cupiditate placeat nisi vitae voluptas eligendi ad nobis eum fugit deserunt ab voluptatibus debitis expedita totam maiores facilis. Omnis error officia provident, itaque pariatur expedita eum quos? Cumque voluptatum impedit dolores dignissimos, ratione enim deleniti reprehenderit laboriosam quasi iusto quaerat, perspiciatis laborum sed fuga commodi quisquam sint necessitatibus? Iusto, maiores qui esse delectus nostrum veniam placeat. Nisi aliquam quisquam non ex deserunt expedita veniam hic, obcaecati in molestiae optio et, quasi necessitatibus sint perspiciatis dignissimos cumque? Suscipit omnis impedit nihil nobis consectetur mollitia laboriosam maxime, nesciunt amet quibusdam voluptatem molestiae. Enim perspiciatis dolore autem dignissimos tempore, quo accusamus aut odio magni nisi inventore alias. Excepturi possimus voluptas deserunt nostrum velit voluptatibus consequatur unde, consectetur commodi eligendi mollitia delectus. Enim quasi expedita iste sint dolores tempore aliquid repudiandae assumenda inventore nostrum, ab eveniet exercitationem veniam. Expedita iusto esse obcaecati placeat debitis distinctio nulla omnis quidem alias cum assumenda, eius dolorem minima sapiente voluptate aliquid et enim? Soluta optio ipsa distinctio, dolores ad, culpa et velit inventore ex eveniet laborum doloremque sed ipsam cupiditate. Cum exercitationem assumenda magnam eum molestias saepe esse sit vel delectus cupiditate recusandae ullam, explicabo reiciendis ratione eius reprehenderit facere? Quos aspernatur quis a blanditiis dicta esse recusandae voluptates incidunt, labore dolorem sint officiis possimus fugiat ipsa id deleniti. Repudiandae ad non natus neque aut provident! Aliquid at eligendi, quaerat debitis nisi iusto ducimus, quia ut necessitatibus fuga aliquam commodi sunt blanditiis. Quam voluptates totam, iure illum voluptas tempora numquam dolore et, sapiente commodi repudiandae unde nesciunt fuga asperiores a libero deserunt praesentium ratione earum ut omnis saepe! Tempora quod tenetur adipisci iste ad itaque. Quasi nam, soluta iure saepe aspernatur voluptate esse aut delectus, architecto ea error ex! Qui, accusantium explicabo!
         </p>
       </div>
@@ -153,8 +160,11 @@ const Slug = () => {
 </div>
  )
  : (
-  <div>
-    Loading.......
+  <div className=' flex items-center justify-center'>
+    <div className='h-10 w-10 md:h-20 md:w-20 xl:h-24 xl:w-24'>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+  </div>
   </div>
  )
   }
