@@ -31,6 +31,7 @@ const Slug = () => {
         const newblogs = await response.json();
         setRecentBlogs(newblogs);
       } catch (error) {
+        setRecentBlogs(null);
         console.error('Error fetching blog details:', error);
       }
     };
@@ -41,31 +42,33 @@ const Slug = () => {
   }, [slug]);
 
   if (!blogdetails || Object.keys(blogdetails).length === 0) {
-    return <div>Loading...</div>;
+    return <div className='h-screen'>Loading...</div>;
   }
 
   return (
     <> <main className='bg-white'>
       <div className='bg-gradient-to-tr from-slate-950/90 via-pink-600/50   to-teal-400/25 min-h-screen'>
-        <div className=' sm:pl-20 sm:pr-20 flex flex-col md:flex-row p-3'>
+        <div className=' sm:pl-4 sm:pr-4 xl:pl-20 xl:pr-20 flex flex-col md:flex-row p-3'>
           <div className='flex flex-col mt-5 basis-3/5'>
-            <img className='rounded-2xl   m-5 ' src={blogdetails.titleimgurl} alt=" Coding Blogs" />
-            <span className=' ml-5 leading-normal text-start font-serif text-5xl text-black' >{blogdetails.title}</span>
+            {/* <div className='aspect-video object-cover'> */}
+            <img className='rounded-2xl aspect-video object-cover  m-5 ' src={blogdetails.titleimgurl} alt=" Coding Blogs" />
+            {/* </div> */}
+            <span className=' ml-5 leading-normal text-start font-serif text-4xl text-black' >{blogdetails.title}</span>
            </div>
 
            <div className=' flex flex-col basis-2/5  m-5'>
-              <div className= ' p-5 flex flex-col justify-center items-center '>
-                <div className='flex justify-start w-full p-3 items-start'>
-                <span className='bg-teal-400 border-spacing-4 rounded-xl p-1 font-bold '>{blogdetails.categoryTitle}</span>
+              <div className= 'p-1 md:p-5 flex flex-col justify-center items-center '>
+                <div className='flex justify-start w-full items-start'>
+                <span className='bg-[#a99f9f] pl-1 pr-1 md:pl-4 md:pr-4  border-spacing-4 rounded-xl p-1 font-bold text-xl'>{blogdetails.categoryTitle}</span>
                 </div>
-                <p className='text-start  font-serif text-xl text-black p-3' >{blogdetails.description} </p>
+                <p className='text-start  font-serif text-xl text-black pt-1 md:p-3' >{blogdetails.description} </p>
                 
               </div>
               <div className='flex flex-col '>
                 <div>
-                <p className='m-8 mb-0 font-semibold text-2xl'>Published on- {blogdetails.date1}</p>
+                <p className='mt-2 md:m-8 md:mb-0 mb-0 font-semibold text-2xl'>Published on- {blogdetails.date1}</p>
                 </div>
-                <div className="m-8 mt-2 flex items-center justify-start gap-x-4">
+                <div className="m-2 ml-0 md:m-8 md:mt-2 flex items-center justify-start gap-x-4">
                   <img src={blogdetails.authorImageUrl} alt="Author Image" className="h-10 w-10 rounded-full bg-gray-50" />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-black text-3xl">
@@ -82,18 +85,18 @@ const Slug = () => {
           
        </div>
        {/* <hr /> */}
-      <div  className='p-10 pt-0 '>
-        <p className=' p-10 m-10  font-mono text-justify bg-gray-300/40'>
+      <div  className='p-2 lg:p-10 pt-0 '>
+        <p className=' p-4 lg:p-10 m-1 sm:m-10  font-mono text-justify bg-gray-300/40 dark:bg-gray-800/30'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore perspiciatis ducimus iusto, illo porro aspernatur, ab aliquam, et quae temporibus eligendi facere deleniti voluptates. Voluptates non totam nostrum eius ipsum qui, impedit illo repellat maiores veritatis praesentium aut. Sint molestiae distinctio natus eius accusamus amet deserunt sapiente illum iste, dolor ab, laudantium, suscipit dolorum? Nulla officiis quae consectetur deleniti maxime quisquam quam, asperiores odio harum ipsam laboriosam voluptates error saepe id dicta quos molestias labore voluptate fugit aspernatur atque nostrum ullam sint facere. Voluptatibus sint molestiae non! Minus voluptatem ullam vero at eum dolore molestiae provident atque dolor porro, unde aliquam velit rem animi eius numquam nulla hic veritatis magnam, expedita tempora id iste fugiat delectus. Aliquid architecto, praesentium soluta reprehenderit rem quasi in quas magnam optio porro ex, omnis aut ratione corporis. At repellendus aspernatur consequuntur mollitia sapiente, sequi voluptatem placeat quae porro doloremque alias veniam ducimus. Doloremque quia vero, deleniti rem nemo ea. Impedit quis ratione expedita ipsum voluptate ex eos repudiandae, rem quisquam ut eius accusantium veritatis repellendus, blanditiis tempora explicabo cum earum officiis soluta, officia corporis. Cumque iure non veniam architecto fuga ipsa facilis. Corrupti quia voluptatibus obcaecati quo quam magnam accusantium voluptatem saepe placeat beatae minus dolore repellat eius, numquam tempora architecto debitis accusamus quis nobis nisi unde. Perspiciatis, officiis iste vel assumenda, praesentium quisquam aliquid optio ratione sequi magnam fugit magni necessitatibus eius, fuga mollitia id voluptas asperiores tenetur illum deleniti exercitationem. Atque labore nesciunt perspiciatis voluptates nihil eaque aperiam tempore vel suscipit, quis eos consectetur quos quia voluptatem sapiente ut voluptas natus. Ad consequuntur in nam deserunt fugit sint sed dolore labore laudantium temporibus, quod fugiat dignissimos doloremque optio eius eos facilis quo minima nulla sapiente id debitis consequatur aliquam. Assumenda corporis ut id. Iure voluptates, praesentium quas tempore voluptatem ad eos. Ducimus harum quas natus temporibus. Aperiam ipsam nostrum a commodi necessitatibus voluptatum mollitia dolorum reiciendis, sit cupiditate placeat nisi vitae voluptas eligendi ad nobis eum fugit deserunt ab voluptatibus debitis expedita totam maiores facilis. Omnis error officia provident, itaque pariatur expedita eum quos? Cumque voluptatum impedit dolores dignissimos, ratione enim deleniti reprehenderit laboriosam quasi iusto quaerat, perspiciatis laborum sed fuga commodi quisquam sint necessitatibus? Iusto, maiores qui esse delectus nostrum veniam placeat. Nisi aliquam quisquam non ex deserunt expedita veniam hic, obcaecati in molestiae optio et, quasi necessitatibus sint perspiciatis dignissimos cumque? Suscipit omnis impedit nihil nobis consectetur mollitia laboriosam maxime, nesciunt amet quibusdam voluptatem molestiae. Enim perspiciatis dolore autem dignissimos tempore, quo accusamus aut odio magni nisi inventore alias. Excepturi possimus voluptas deserunt nostrum velit voluptatibus consequatur unde, consectetur commodi eligendi mollitia delectus. Enim quasi expedita iste sint dolores tempore aliquid repudiandae assumenda inventore nostrum, ab eveniet exercitationem veniam. Expedita iusto esse obcaecati placeat debitis distinctio nulla omnis quidem alias cum assumenda, eius dolorem minima sapiente voluptate aliquid et enim? Soluta optio ipsa distinctio, dolores ad, culpa et velit inventore ex eveniet laborum doloremque sed ipsam cupiditate. Cum exercitationem assumenda magnam eum molestias saepe esse sit vel delectus cupiditate recusandae ullam, explicabo reiciendis ratione eius reprehenderit facere? Quos aspernatur quis a blanditiis dicta esse recusandae voluptates incidunt, labore dolorem sint officiis possimus fugiat ipsa id deleniti. Repudiandae ad non natus neque aut provident! Aliquid at eligendi, quaerat debitis nisi iusto ducimus, quia ut necessitatibus fuga aliquam commodi sunt blanditiis. Quam voluptates totam, iure illum voluptas tempora numquam dolore et, sapiente commodi repudiandae unde nesciunt fuga asperiores a libero deserunt praesentium ratione earum ut omnis saepe! Tempora quod tenetur adipisci iste ad itaque. Quasi nam, soluta iure saepe aspernatur voluptate esse aut delectus, architecto ea error ex! Qui, accusantium explicabo!
         </p>
       </div>
       {
-        recentBlogs ? (
+        recentBlogs!=null && recentBlogs.length!=0 ? (
 
        
-      <div className='flex flex-col p-1 m-1 sm:p-10 sm:pt-0 sm:m-10 sm:mb-0 sm:mt-0'>
-       <div className='flex justify-center items-center '>
-         <p className='leading-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif bg-gradient-to-b from-red-300 via-green-200/65 to-lime-300/20 mb-3 p-1 rounded-xl'>
+      <div className='flex flex-col p-1 sm:p-2 m-1 mb-0 lg:p-10 sm:pt-0 sm:m-10 sm:mb-0 sm:mt-0'>
+       <div className='flex justify-center items-center  '>
+         <p className='dark:text-black leading-normal text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-serif bg-[#d5eae6] mb-3 p-3 pt-2 pb-2 rounded-full '>
             Our Recent Blogs
           </p>
        </div>
@@ -113,13 +116,13 @@ const Slug = () => {
                   </time>
                   <a
                     href="/"
-                    className="mt-1 max-h-40 max-w-80 sm:max-w-96 sm:max-h-48 relative z-10 rounded-full bg-gray-300 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    className="line-clamp-1 mt-1 max-h-40 max-w-80 sm:max-w-96 sm:max-h-48 relative z-10 rounded-full bg-gray-300 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                   >
                     {recentBlogs.categoryTitle}
                   </a>
                 </div>
                 <div className=" p-1 pt-0 group relative max-h-40 max-w-80  sm:max-h-48 sm:max-w-96">
-                  <h3 className=" text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                  <h3 className="line-clamp-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                     <Link href={`http://localhost:3000/blogposts/${encodeURIComponent(recentBlogs._id)}`}>
                       <span className="absolute inset-0" />
                       {recentBlogs.title}

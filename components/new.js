@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react'
 import { Dialog, Popover } from '@headlessui/react'
 import Link from 'next/link';
@@ -5,16 +6,19 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-let nav=[
-  {name:"Home" , link:"/"},
-  {name:"Blogs", link:"/blogs"},
-  {name:"About Us" , link:"/about"},
-  {name:"Contact Us" , link:"/contactus"},
+let navitem=[
+  {id:1 ,name:"Home" , link:"/"},
+  {id:2 ,name:"Blogs", link:"/blogs"},
+  {id:3 ,name:"Add Blog", link:"/addblog"},
+  {id:4 ,name:"Contact Us" , link:"/contactus"},
 
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
+}
+const handleclick = ()=>{
+  setMobileMenuOpen(false);
 }
 
 export default function Example() {
@@ -25,8 +29,8 @@ export default function Example() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Gamerszone Xyra</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+            <span className="sr-only">Solar Power Predictor</span>
+            <img className="h-8 w-auto" src="./solar-power-predictor-high-resolution-logo-black-transparent.png" alt="SPP" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -41,10 +45,13 @@ export default function Example() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           {
-          nav.map((nav)=>{
-            return <Link key={nav.name} href={nav.link} className="    hover:text-emerald-500  font-semibold text-1xl leading-6 mx-6 text-gray-900 " >
-            {nav.name}
+          navitem.map((navitem)=>{
+           
+            return <Link  key={navitem.id} href={navitem.link} className="    hover:text-emerald-500  font-semibold text-1xl leading-6 mx-6 text-gray-900 " >
+            {navitem.name}
           </Link>
+        
+           
            
           })
           }
@@ -56,11 +63,11 @@ export default function Example() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">Solar Power Predictor</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                src="./solar-power-predictor-high-resolution-logo-black-transparent.png"
+                alt="SPP"
               />
             </Link>
             <button
@@ -76,13 +83,17 @@ export default function Example() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {
-                  nav.map((nav)=>{
+                  navitem.map((navitem)=>{
                   return <Link
-                  href={nav.link}
+                  href={navitem.link}
+                  key={navitem.id}
+                  // onClick={handleclick}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                  {nav.name}
+                  {navitem.name}
                   </Link>
+                
+                  
                    
                   })
                 }

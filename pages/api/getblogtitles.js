@@ -7,6 +7,7 @@ export default async function handler(req, res) {
       const collection = db.collection('blogs');
       const titles = await collection.find({}).toArray();
       // res.status(200).json({ success: true, titles });
+      console.log("titlessss" , titles)
       res.status(200).json(titles);
     } catch (error) {
       console.error(error);
