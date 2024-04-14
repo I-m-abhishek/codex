@@ -33,7 +33,7 @@ const Addblog = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/createblog', {
+      const response = await fetch('/api/createblog', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ const Addblog = () => {
         Category Title
           </label>
           <div className="lg:max-w-full flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 ">
-          <input type="text" name="categoryTitle" value={formData.categoryTitle}  onChange={handleChange} className="dark:text-white block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Give url of image for title" required />
+          <input type="text" name="categoryTitle" value={formData.categoryTitle}  onChange={handleChange} className="dark:text-white block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Give category for your article" required />
           </div>
         <br />
 

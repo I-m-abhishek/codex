@@ -24,7 +24,7 @@ export default function Blogform() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3000/api/createblog', {
+      const response = await fetch('./api/createblog', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

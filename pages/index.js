@@ -2,8 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image' 
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
+import Snap from '@/components/snap'
 
-
+//  responsive banana hai index ke blogs ko
+// search bar in blogs spage or overall page
+// read more button activate with slug 
+// margin and padding in explore all article button 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -62,13 +66,14 @@ export default function Home() {
              <p className='text-center text-2xl md:text-4xl font-semibold'>Explore Our Top Articles</p>
             <hr className='m-7 mt-4 border-2 border-blue-500 cursor-pointer hover:border-red-500 duration-500' />
 
-         <div className=''>
-          <div className='float-left w-1/3 h-1/3 m-2 mt-5 mr-5'>
-          <img className='flex rounded-md' src="./C++.webp" alt="codeX" />
+         <div className='flex'>
+          <div className='flex m-2 mt-5 mr-5'>
+          <img className='w-1/2 h-full mr-1 rounded-md' src="./C++.webp" alt="CodeX" />
+          <img className='w-1/2 h-full ml-1 mt-5 rounded-md' src="./cppbg.jpg" alt="CodeX" />
           </div>
 
            <div  className='m-2'>
-               <h1 className='font-bold text-center text-xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
+               <h1 className='font-bold text-center text-2xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
                <hr className=' border-black cursor-pointer'/>
                 <p className='text-lg'>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:
                 <br/>
@@ -84,36 +89,21 @@ export default function Home() {
 <strong>4.Practice Problem Solving:</strong> Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef. Start with easier problems and gradually move to more challenging ones as you build confidence.
 
 <br />
-<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures.
+<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures..... 
+<button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl font-semibold p-1'> 
+  <a href="">Read More</a>
+</button>
 
-<br />
-<strong>6.Implement Algorithms and Data Structures:</strong> Practice implementing algorithms and data structures from scratch. This helps reinforce your understanding and improves your coding skills.
-
-<br />
-<strong>7.Use Efficient Coding Techniques:</strong> Write clean, concise, and efficient code. Avoid redundant code, optimize time and space complexity, and make use of C++ language features like operator overloading, templates, and inline functions.
-
-<br />
-<strong>8.Learn Greedy and Dynamic Programming Techniques:</strong> These are two important problem-solving paradigms often used in competitive programming. Understand the principles behind greedy algorithms and dynamic programming, and practice solving problems using these techniques.
-
-<br />
-<strong>9.Participate in Contests:</strong> Take part in coding contests regularly to simulate real competition scenarios and improve your speed and accuracy in problem-solving.
-
-<br />
-<strong>10.Stay Updated and Keep Practicing:</strong> Stay updated with new algorithms, techniques, and problem-solving strategies. Keep practicing regularly to maintain and improve your skills.
-<br />
-<br />
-Remember, consistent practice and continuous learning are key to mastering competitive programming in C++. Keep challenging yourself with new problems and seek feedback to identify areas for improvement.</p>
+</p>
            </div>
          </div>
-         
-         <br />
-         <div className=''>
-          <div className='float-right w-1/3 h-1/3 m-2 mt-5 ml-5'>
-          <img className='flex rounded-md' src="https://images.unsplash.com/photo-1542435503-956c469947f6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="codeX" />
-          </div>
+<br  />
+<hr className='m-7 mt-4 border-dotted border-[#908b8b] cursor-pointer hover:border-red-500 duration-500' />
 
+
+<div className='flex mb-5 md:mb-10 lg:mb-20'>         
            <div  className='m-2'>
-           <h1 className='font-bold text-center text-xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
+               <h1 className='font-bold text-center text-2xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
                <hr className=' border-black cursor-pointer'/>
                 <p className='text-lg'>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:
                 <br/>
@@ -129,44 +119,28 @@ Remember, consistent practice and continuous learning are key to mastering compe
 <strong>4.Practice Problem Solving:</strong> Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef. Start with easier problems and gradually move to more challenging ones as you build confidence.
 
 <br />
-<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures.
-
-<br />
-<strong>6.Implement Algorithms and Data Structures:</strong> Practice implementing algorithms and data structures from scratch. This helps reinforce your understanding and improves your coding skills.
-
-<br />
-<strong>7.Use Efficient Coding Techniques:</strong> Write clean, concise, and efficient code. Avoid redundant code, optimize time and space complexity, and make use of C++ language features like operator overloading, templates, and inline functions.
-
-<br />
-<strong>8.Learn Greedy and Dynamic Programming Techniques:</strong> These are two important problem-solving paradigms often used in competitive programming. Understand the principles behind greedy algorithms and dynamic programming, and practice solving problems using these techniques.
-
-<br />
-<strong>9.Participate in Contests:</strong> Take part in coding contests regularly to simulate real competition scenarios and improve your speed and accuracy in problem-solving.
-
-<br />
-<strong>10.Stay Updated and Keep Practicing:</strong> Stay updated with new algorithms, techniques, and problem-solving strategies. Keep practicing regularly to maintain and improve your skills.
-<br />
-<br />
-Remember, consistent practice and continuous learning are key to mastering competitive programming in C++. Keep challenging yourself with new problems and seek feedback to identify areas for improvement.</p>
-           </div>
+<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures..... 
+<button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl font-semibold p-1'> 
+  <a href="">Read More</a>
+</button>
+</p>
+</div>
+         <div className='flex m-2 mt-5 mr-5'>
+          <img className='w-1/2 h-full mr-1 mt-5 rounded-md' src="./C++.webp" alt="CodeX" />
+          <img className='w-1/2 h-full ml-1  rounded-md' src="./cppbg.jpg" alt="CodeX" />
+          </div>
+           
          </div>
          
-         
-         
-         
-         
-        
-        
         </div>
-
-        <div>
-          <button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl p-2 ml-2 m-5'>
+        <div className='ml-2 mr-2 mt-5'>
+          <button className='w-full rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl sm:text-2xl lg:text-3xl font-semibold p-2 '>
             <Link href="/blogs">Explore All Articles</Link>
           </button>
         </div>
-
         
-         </div>
+        </div>
+        <Snap msg={"index"}/>
       </main>
     </>
   )

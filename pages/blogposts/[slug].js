@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from "next/link"
+import Snap from '@/components/snap';
 // comment section add which willl require login and signup to make comment 
 // loader where ever we used loading //
 // i think we have used loading in bottom of one page and one time top of the page
 
 const Slug = () => {
   const [blogdetails, setBlogdetails] = useState({});
-  const [recentBlogs, setRecentBlogs] = useState(null);
+
   const router = useRouter();
   const { slug } = router.query;
 
@@ -21,24 +22,7 @@ const Slug = () => {
         console.error('Error fetching blog details:', error);
       }
     };
-
-    if (slug) {
-      fetchData();
-    }
-  }, [slug]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`../api/getrecentblogs`);
-        const newblogs = await response.json();
-        setRecentBlogs(newblogs);
-      } catch (error) {
-        setRecentBlogs(null);
-        console.error('Error fetching blog details:', error);
-      }
-    };
-
+    console.log("slug");
     if (slug) {
       fetchData();
     }
@@ -47,7 +31,7 @@ const Slug = () => {
   if (!blogdetails || Object.keys(blogdetails).length === 0) {
     return <div className='h-screen flex items-center justify-center'>
       <div className='h-10 w-10 md:h-20 md:w-20 xl:h-24 xl:w-24 flex items-center justify-center'>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
       </div>
     </div>;
   }
@@ -73,7 +57,7 @@ const Slug = () => {
               </div>
               <div className='flex flex-col '>
                 <div>
-                <p className='mt-2 md:m-8 md:mb-0 mb-0 font-semibold text-2xl'>Published on- {blogdetails.date1}</p>
+                <p className='mt-2 md:m-8 md:mb-0 md:mt-2 mb-0 font-semibold text-2xl'>Published on- {blogdetails.date1}</p>
                 </div>
                 <div className="m-2 ml-0 md:m-8 md:mt-2 flex items-center justify-start gap-x-4">
                   <img src={blogdetails.authorImageUrl} alt="Author Image" className="h-10 w-10 rounded-full bg-gray-50" />
@@ -92,82 +76,12 @@ const Slug = () => {
           
        </div>
        {/* <hr /> */}
-      <div  className='p-2 lg:p-10 lg:pb-0 pt-0 '>
+      <div  className='p-2 lg:p-10 lg:pb-0 pt-0 lg:pt-0 '>
         <p className=' p-4 lg:p-10  m-1 sm:m-10  font-mono text-justify bg-gray-300/40 dark:bg-gray-800/30'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore perspiciatis ducimus iusto, illo porro aspernatur, ab aliquam, et quae temporibus eligendi facere deleniti voluptates. Voluptates non totam nostrum eius ipsum qui, impedit illo repellat maiores veritatis praesentium aut. Sint molestiae distinctio natus eius accusamus amet deserunt sapiente illum iste, dolor ab, laudantium, suscipit dolorum? Nulla officiis quae consectetur deleniti maxime quisquam quam, asperiores odio harum ipsam laboriosam voluptates error saepe id dicta quos molestias labore voluptate fugit aspernatur atque nostrum ullam sint facere. Voluptatibus sint molestiae non! Minus voluptatem ullam vero at eum dolore molestiae provident atque dolor porro, unde aliquam velit rem animi eius numquam nulla hic veritatis magnam, expedita tempora id iste fugiat delectus. Aliquid architecto, praesentium soluta reprehenderit rem quasi in quas magnam optio porro ex, omnis aut ratione corporis. At repellendus aspernatur consequuntur mollitia sapiente, sequi voluptatem placeat quae porro doloremque alias veniam ducimus. Doloremque quia vero, deleniti rem nemo ea. Impedit quis ratione expedita ipsum voluptate ex eos repudiandae, rem quisquam ut eius accusantium veritatis repellendus, blanditiis tempora explicabo cum earum officiis soluta, officia corporis. Cumque iure non veniam architecto fuga ipsa facilis. Corrupti quia voluptatibus obcaecati quo quam magnam accusantium voluptatem saepe placeat beatae minus dolore repellat eius, numquam tempora architecto debitis accusamus quis nobis nisi unde. Perspiciatis, officiis iste vel assumenda, praesentium quisquam aliquid optio ratione sequi magnam fugit magni necessitatibus eius, fuga mollitia id voluptas asperiores tenetur illum deleniti exercitationem. Atque labore nesciunt perspiciatis voluptates nihil eaque aperiam tempore vel suscipit, quis eos consectetur quos quia voluptatem sapiente ut voluptas natus. Ad consequuntur in nam deserunt fugit sint sed dolore labore laudantium temporibus, quod fugiat dignissimos doloremque optio eius eos facilis quo minima nulla sapiente id debitis consequatur aliquam. Assumenda corporis ut id. Iure voluptates, praesentium quas tempore voluptatem ad eos. Ducimus harum quas natus temporibus. Aperiam ipsam nostrum a commodi necessitatibus voluptatum mollitia dolorum reiciendis, sit cupiditate placeat nisi vitae voluptas eligendi ad nobis eum fugit deserunt ab voluptatibus debitis expedita totam maiores facilis. Omnis error officia provident, itaque pariatur expedita eum quos? Cumque voluptatum impedit dolores dignissimos, ratione enim deleniti reprehenderit laboriosam quasi iusto quaerat, perspiciatis laborum sed fuga commodi quisquam sint necessitatibus? Iusto, maiores qui esse delectus nostrum veniam placeat. Nisi aliquam quisquam non ex deserunt expedita veniam hic, obcaecati in molestiae optio et, quasi necessitatibus sint perspiciatis dignissimos cumque? Suscipit omnis impedit nihil nobis consectetur mollitia laboriosam maxime, nesciunt amet quibusdam voluptatem molestiae. Enim perspiciatis dolore autem dignissimos tempore, quo accusamus aut odio magni nisi inventore alias. Excepturi possimus voluptas deserunt nostrum velit voluptatibus consequatur unde, consectetur commodi eligendi mollitia delectus. Enim quasi expedita iste sint dolores tempore aliquid repudiandae assumenda inventore nostrum, ab eveniet exercitationem veniam. Expedita iusto esse obcaecati placeat debitis distinctio nulla omnis quidem alias cum assumenda, eius dolorem minima sapiente voluptate aliquid et enim? Soluta optio ipsa distinctio, dolores ad, culpa et velit inventore ex eveniet laborum doloremque sed ipsam cupiditate. Cum exercitationem assumenda magnam eum molestias saepe esse sit vel delectus cupiditate recusandae ullam, explicabo reiciendis ratione eius reprehenderit facere? Quos aspernatur quis a blanditiis dicta esse recusandae voluptates incidunt, labore dolorem sint officiis possimus fugiat ipsa id deleniti. Repudiandae ad non natus neque aut provident! Aliquid at eligendi, quaerat debitis nisi iusto ducimus, quia ut necessitatibus fuga aliquam commodi sunt blanditiis. Quam voluptates totam, iure illum voluptas tempora numquam dolore et, sapiente commodi repudiandae unde nesciunt fuga asperiores a libero deserunt praesentium ratione earum ut omnis saepe! Tempora quod tenetur adipisci iste ad itaque. Quasi nam, soluta iure saepe aspernatur voluptate esse aut delectus, architecto ea error ex! Qui, accusantium explicabo!
+          {blogdetails.content}
         </p>
       </div>
-      {
-        recentBlogs!=null && recentBlogs.length!=0 ? (
-
-       
-      <div className='flex flex-col p-1 sm:p-2 m-1 mb-0 lg:p-10 sm:pt-0 sm:m-10 sm:mb-0 sm:mt-0'>
-       <div className='flex justify-center items-center  '>
-         <p className='dark:text-black leading-normal text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-serif bg-[#d5eae6] mb-3 p-3 pt-2 pb-2 rounded-full '>
-            Our Recent Blogs
-          </p>
-       </div>
-      <div className="relative  items-center snap-x flex gap-6   w-full overflow-x-auto">
-      
-      {recentBlogs.map((recentBlogs) => {
-          return <>
-  <div className="flex flex-col snap-center shrink-0 pb-1"> 
-        
-  <article key={recentBlogs._id} className="bg-white rounded-xl flex max-w-xl flex-col items-start justify-between">
-                <div className=' h-40 w-80 sm:h-48 sm:w-96' >
-                <img className=" sm:max-h-48 sm:max-w-96 h-full w-full object-cover rounded-xl " src={recentBlogs.titleimgurl} alt="Blogs" />
-                </div>
-                <div className="p-1 pt-0 flex items-center gap-x-4 text-xs max-h-48 max-w-96">
-                <time dateTime={recentBlogs.datetime1} className="text-gray-500">
-                    {recentBlogs.date1}
-                  </time>
-                  <a
-                    href="/"
-                    className="line-clamp-1 mt-1 max-h-40 max-w-80 sm:max-w-96 sm:max-h-48 relative z-10 rounded-full bg-gray-300 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                  >
-                    {recentBlogs.categoryTitle}
-                  </a>
-                </div>
-                <div className=" p-1 pt-0 group relative max-h-40 max-w-80  sm:max-h-48 sm:max-w-96">
-                  <h3 className="line-clamp-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <Link href={`http://localhost:3000/blogposts/${encodeURIComponent(recentBlogs._id)}`}>
-                      <span className="absolute inset-0" />
-                      {recentBlogs.title}
-                    </Link>
-                  </h3>
-                  <p className="line-clamp-1 text-sm leading-6 text-gray-600">{recentBlogs.description}</p>
-                </div>
-                <div className="p-1 pt-0 max-h-40 max-w-80  sm:max-h-48 sm:max-w-96 relative mt-2 flex items-center gap-x-4">
-                  <img src={recentBlogs.authorImageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
-                  <div className="text-sm leading-6">
-                    <p className="font-semibold text-gray-900">
-                      <Link href= "/">
-                        <span className="absolute inset-0" />
-                        {recentBlogs.authorName}
-                      </Link>
-                    </p>
-                    <p className="text-gray-600">{recentBlogs.authorRole}</p>
-                  </div>
-                </div>
-              </article>
-        
-
-  </div>
-  
-      </>
-    }) }
-    </div>
-</div>
- )
- : (
-  <div className=' flex items-center justify-center'>
-    <div className='h-10 w-10 md:h-20 md:w-20 xl:h-24 xl:w-24'>
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#FF156D" stroke="#FF156D" stroke-width="15" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#FF156D" stroke="#FF156D" strokeWidth="15" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
-  </div>
-  </div>
- )
-  }
+    <Snap msg={"slugg"}/>
       </div>
     </main>
     </>

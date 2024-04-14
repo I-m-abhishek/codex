@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       const collection = db.collection('blogs');
 
       // Sort in descending order based on the timestamp and limit to 10
-      const recentBlogs = await collection.find({}).sort({ timestamp: -1 }).limit(10).toArray();
+      const recentBlogs = await collection.find({}).sort({ _id: -1 }).limit(10).toArray();
 
       res.status(200).json(recentBlogs);
     } catch (error) {

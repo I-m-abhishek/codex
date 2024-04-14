@@ -24,14 +24,15 @@ import Link from "next/link"
             Explore strategies to improve your coding proficiency and advance your projects with our helpful insights
             </p>
           </div>
-          <div className="mx-auto mt-10 grid max-w-2xl  grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className=" mx-auto mt-10 grid max-w-2xl  grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {posts.map((post) => (
-              <article key={post._id} className="flex max-w-80 md:max-w-96 lg:max-w-none flex-col items-start justify-between">
+              <article key={post._id} className="rounded-md shadow-lg shadow-[#635757] flex max-w-80 md:max-w-96 lg:max-w-none flex-col items-start justify-between">
                 
-                <div className='h-52 w-full md:h-56 md:w-full'>
-                <img className="h-full w-full object-cover rounded-xl" src={post.titleimgurl} alt="Blogs" />
+                <div className=' h-52 w-full md:h-56 md:w-full'>
+                <img className="h-full w-full object-cover rounded-md" src={post.titleimgurl} alt="Blogs" />
                 </div>
-                <div className="flex items-center gap-x-4 text-xs">
+                <div className="pl-1 pr-1 pb-1">
+                <div className=" flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime1} className="text-gray-500">
                     {post.date1}
                   </time>
@@ -44,7 +45,7 @@ import Link from "next/link"
                 </div>
                 <div className="group relative">
                   <h3 className="line-clamp-2 mt-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <Link href={`http://localhost:3000/blogposts/${encodeURIComponent(post._id)}`}>
+                    <Link href={`./blogposts/${encodeURIComponent(post._id)}`}>
                       <span className="absolute inset-0" />
                       {post.title}
                     </Link>
@@ -62,6 +63,7 @@ import Link from "next/link"
                     </p>
                     <p className="text-gray-600">{post.authorRole}</p>
                   </div>
+                </div>
                 </div>
               </article>
             ))}
