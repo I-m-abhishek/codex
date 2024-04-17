@@ -3,11 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import Snap from '@/components/snap'
-
+// new.js me logo and name wgaira sb sudharna hai and jb responsive hota hai to menu par click krne par menu band automatic hona chaahiye
 //  responsive banana hai index ke blogs ko
-// search bar in blogs spage or overall page
+// search bar in blogs page or overall page
 // read more button activate with slug 
 // margin and padding in explore all article button 
+// remove images which are not used
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -66,73 +67,84 @@ export default function Home() {
              <p className='text-center text-2xl md:text-4xl font-semibold'>Explore Our Top Articles</p>
             <hr className='m-7 mt-4 border-2 border-blue-500 cursor-pointer hover:border-red-500 duration-500' />
 
-         <div className='flex'>
-          <div className='flex m-2 mt-5 mr-5'>
-          <img className='w-1/2 h-full mr-1 rounded-md' src="./C++.webp" alt="CodeX" />
-          <img className='w-1/2 h-full ml-1 mt-5 rounded-md' src="./cppbg.jpg" alt="CodeX" />
+
+
+
+            <div className='flex'>         
+           <div  className='m-2'>
+               <h1 className='font-bold text-center text-2xl mb-2'>How to Push Code to GitHub: A Step-by-Step Guide</h1>
+               <hr className=' border-black cursor-pointer'/>
+        <article>
+          <p  className='text-lg'>
+        <p>Pushing your code to GitHub is an essential step in collaborating with others and keeping track of your project's history. In this guide, we'll walk you through the process step by step.</p>
+
+        <h2><strong>1. Initialize Git Repository</strong></h2>
+        <p>If you haven't already initialized a Git repository in your project directory, you can do so by running the following command in your terminal:</p>
+        <pre className='bg-gray-800 text-white p-3 rounded-lg mt-1 mb-1'><code>git init</code></pre>
+
+        <h2><strong>2. Add Remote Repository URL</strong></h2>
+        <p>Next, you'll need to add the URL of your GitHub repository as a remote to your local repository. You can do this using the <code>git remote add</code> command. Replace <code>&lt;repository_url&gt;</code> with the URL of your GitHub repository:</p>
+        <pre className='bg-gray-800 text-white p-3 rounded-lg mt-1 mb-1'><code>git remote add origin &lt;repository_url&gt;</code></pre>
+
+        <h2><strong>3. Stage Changes</strong></h2>
+        <p>Use the <code>git add</code> command to stage the changes you want to commit. This command tells Git which files you want to include in the next commit.</p>
+
+        </p>
+    </article>
+<button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white   font-semibold p-1'> 
+  <a href="">Read More</a>
+</button>
+
           </div>
-
-           <div  className='m-2'>
-               <h1 className='font-bold text-center text-2xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
-               <hr className=' border-black cursor-pointer'/>
-                <p className='text-lg'>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:
-                <br/>
-    
-
-<strong>1.Master the Basics:</strong> Ensure you have a solid understanding of basic programming concepts such as variables, loops, conditional statements, functions, and data types in C++.
-<br />
-<strong>2.Learn Standard Template Library (STL):</strong> STL provides a rich set of data structures (like vectors, queues, stacks, sets, maps) and algorithms (like sorting, searching, and manipulating elements) that can greatly simplify coding in competitive programming.
-<br />
-<strong>3.Understand Algorithms and Data Structures:</strong> Gain proficiency in fundamental algorithms and data structures such as sorting algorithms (e.g., quicksort, mergesort), searching algorithms (e.g., binary search), dynamic programming, graph algorithms (e.g., BFS, DFS), trees, and heaps.
-
-<br />
-<strong>4.Practice Problem Solving:</strong> Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef. Start with easier problems and gradually move to more challenging ones as you build confidence.
-
-<br />
-<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures..... 
-<button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl font-semibold p-1'> 
-  <a href="">Read More</a>
-</button>
-
-</p>
-           </div>
-         </div>
-<br  />
-<hr className='m-7 mt-4 border-dotted border-[#908b8b] cursor-pointer hover:border-red-500 duration-500' />
-
-
-<div className='flex mb-5 md:mb-10 lg:mb-20'>         
-           <div  className='m-2'>
-               <h1 className='font-bold text-center text-2xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
-               <hr className=' border-black cursor-pointer'/>
-                <p className='text-lg'>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:
-                <br/>
-    
-
-<strong>1.Master the Basics:</strong> Ensure you have a solid understanding of basic programming concepts such as variables, loops, conditional statements, functions, and data types in C++.
-<br />
-<strong>2.Learn Standard Template Library (STL):</strong> STL provides a rich set of data structures (like vectors, queues, stacks, sets, maps) and algorithms (like sorting, searching, and manipulating elements) that can greatly simplify coding in competitive programming.
-<br />
-<strong>3.Understand Algorithms and Data Structures:</strong> Gain proficiency in fundamental algorithms and data structures such as sorting algorithms (e.g., quicksort, mergesort), searching algorithms (e.g., binary search), dynamic programming, graph algorithms (e.g., BFS, DFS), trees, and heaps.
-
-<br />
-<strong>4.Practice Problem Solving:</strong> Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef. Start with easier problems and gradually move to more challenging ones as you build confidence.
-
-<br />
-<strong>5.Analyze and Understand Solutions:</strong> After solving problems, analyze other people's solutions to learn new techniques and improve your understanding of algorithms and data structures..... 
-<button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl font-semibold p-1'> 
-  <a href="">Read More</a>
-</button>
-</p>
-</div>
-         <div className='flex m-2 mt-5 mr-5'>
-          <img className='w-1/2 h-full mr-1 mt-5 rounded-md' src="./C++.webp" alt="CodeX" />
-          <img className='w-1/2 h-full ml-1  rounded-md' src="./cppbg.jpg" alt="CodeX" />
+         <div className='flex m-2 mt-5'>
+          <img className='w-1/2 h-full mr-1 mt-5 rounded-md object-cover'  src="./github-img.jpg" alt="CodeX" />
+          <img className='w-1/2 h-full ml-1  rounded-md ' src="./github-push.jpg" alt="CodeX" />
           </div>
            
          </div>
          
         </div>
+
+         
+<hr className='m-7 mt-4 border-dotted border-[#908b8b] cursor-pointer hover:border-red-500 duration-500' />
+        <div className='flex  mb-5 md:mb-9 lg:mb-16'>
+          <div className='flex m-2 mt-5 mr-5'>
+          <img className='w-1/2 h-full mr-1 rounded-md ' src="./c++new.avif" alt="CodeX" />
+          <img className='w-1/2 h-full ml-1 mt-5 rounded-md' src="./home-page-2.jpg" alt="CodeX" />
+          </div>
+          
+          <div  className='m-2'>
+               <h1 className='font-bold text-center text-2xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
+               <hr className=' border-black cursor-pointer'/>
+    <article>
+          <p  className='text-lg'>
+          <p>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:</p>
+
+          <h2><strong>1. Master the Basics</strong></h2>
+        <p>Ensure you have a solid understanding of basic programming concepts such as variables, loops, conditional statements, functions, and data types in C++.</p>
+
+        <h2><strong>2. Learn Standard Template Library (STL)</strong></h2>
+        <p>STL provides a rich set of data structures (like vectors, queues, stacks, sets, maps) and algorithms (like sorting, searching, and manipulating elements) that can greatly simplify coding in competitive programming.</p>
+
+        <h2><strong>3. Understand Algorithms and Data Structures</strong></h2>
+        <p>Master essential algorithms and data structures, including sorting algorithms like quicksort and mergesort, searching algorithms such as binary search, dynamic programming, graph algorithms, trees and heaps.</p>
+
+        <h2><strong>4. Practice Problem Solving</strong></h2>
+        <p>Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef......
+        </p>
+
+        </p>
+    </article>
+
+
+<button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white   font-semibold p-1'> 
+  <a href="">Read More</a>
+</button>
+          </div>
+          
+
+         </div>
+        <br  />
         <div className='ml-2 mr-2 mt-5'>
           <button className='w-full rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white text-xl sm:text-2xl lg:text-3xl font-semibold p-2 '>
             <Link href="/blogs">Explore All Articles</Link>
