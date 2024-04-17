@@ -74,8 +74,8 @@ export default function Home() {
            <div  className='m-2'>
                <h1 className='font-bold text-center text-2xl mb-2'>How to Push Code to GitHub: A Step-by-Step Guide</h1>
                <hr className=' border-black cursor-pointer'/>
-        <article>
-          <p  className='text-lg'>
+        <article className='text-lg'>
+          
         <p>Pushing your code to GitHub is an essential step in collaborating with others and keeping track of your project's history. In this guide, we'll walk you through the process step by step.</p>
 
         <h2><strong>1. Initialize Git Repository</strong></h2>
@@ -89,7 +89,7 @@ export default function Home() {
         <h2><strong>3. Stage Changes</strong></h2>
         <p>Use the <code>git add</code> command to stage the changes you want to commit. This command tells Git which files you want to include in the next commit.</p>
 
-        </p>
+       
     </article>
 <button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white   font-semibold p-1'> 
   <a href="">Read More</a>
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
 
          
-<hr className='m-7 mt-4 border-dotted border-[#908b8b] cursor-pointer hover:border-red-500 duration-500' />
+<hr className='m-7 mt-9 border-dotted border-[#908b8b] cursor-pointer hover:border-red-500 duration-500' />
         <div className='flex  mb-5 md:mb-9 lg:mb-16'>
           <div className='flex m-2 mt-5 mr-5'>
           <img className='w-1/2 h-full mr-1 rounded-md ' src="./c++new.avif" alt="CodeX" />
@@ -116,8 +116,7 @@ export default function Home() {
           <div  className='m-2'>
                <h1 className='font-bold text-center text-2xl mb-2'>Mastering Competitive Programming in C++: Techniques and Strategies for Success</h1>
                <hr className=' border-black cursor-pointer'/>
-    <article>
-          <p  className='text-lg'>
+    <article className='text-lg'>
           <p>Competitive programming requires a combination of strong problem-solving skills, algorithmic knowledge, and efficient coding techniques. Here are some best techniques to conquer competitive programming in C++:</p>
 
           <h2><strong>1. Master the Basics</strong></h2>
@@ -133,7 +132,7 @@ export default function Home() {
         <p>Regularly solve practice problems on online coding platforms like Codeforces, LeetCode, HackerRank, or CodeChef......
         </p>
 
-        </p>
+    
     </article>
 
 
