@@ -5,7 +5,9 @@ import Snap from '@/components/snap';
 // comment section add which willl require login and signup to make comment 
 // loader where ever we used loading //
 // i think we have used loading in bottom of one page and one time top of the page
-
+//  we need to change addblog functionality
+// if we are clicking on image of author or coding in blog section then it is redirecting to homepage
+// this type all links make correct and  bugs fixing 
 const Slug = () => {
   const [blogdetails, setBlogdetails] = useState({});
 

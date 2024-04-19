@@ -3,12 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import Snap from '@/components/snap'
-// new.js me logo and name wgaira sb sudharna hai and jb responsive hota hai to menu par click krne par menu band automatic hona chaahiye
-//  responsive banana hai index ke blogs ko
+// favicon set 
 // search bar in blogs page or overall page
 // read more button activate with slug 
-// margin and padding in explore all article button 
-// remove images which are not used
+
+// remove images which are not used\\
+// explore all articles button size change 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -74,20 +75,20 @@ export default function Home() {
            <div  className='m-2'>
                <h1 className='font-bold text-center text-2xl mb-2'>How to Push Code to GitHub: A Step-by-Step Guide</h1>
                <hr className=' border-black cursor-pointer'/>
-        <article className='text-lg'>
+        <article className='text-lg '>
           
         <p>Pushing your code to GitHub is an essential step in collaborating with others and keeping track of your project's history. In this guide, we'll walk you through the process step by step.</p>
 
         <h2><strong>1. Initialize Git Repository</strong></h2>
         <p>If you haven't already initialized a Git repository in your project directory, you can do so by running the following command in your terminal:</p>
-        <pre className='bg-gray-800 text-white p-3 rounded-lg mt-1 mb-1'><code>git init</code></pre>
+        <pre className='bg-gray-800 text-white p-3 rounded-lg mt-1 mb-1 min-w-0 overflow-x-auto'><code className="whitespace-pre-wrap">git init</code></pre>
 
         <h2><strong>2. Add Remote Repository URL</strong></h2>
         <p>Next, you'll need to add the URL of your GitHub repository as a remote to your local repository. You can do this using the <code>git remote add</code> command. Replace <code>&lt;repository_url&gt;</code> with the URL of your GitHub repository:</p>
-        <pre className='bg-gray-800 text-white p-3 rounded-lg mt-1 mb-1'><code>git remote add origin &lt;repository_url&gt;</code></pre>
+        <pre className='bg-gray-800 text-white p-3 rounded-lg mt-1 mb-1 min-w-0 overflow-x-auto'><code className="whitespace-pre-wrap">git remote add origin &lt;repository_url&gt;</code></pre>
 
         <h2><strong>3. Stage Changes</strong></h2>
-        <p>Use the <code>git add</code> command to stage the changes you want to commit. This command tells Git which files you want to include in the next commit.</p>
+        <p>Use the <code>git add</code> command to stage the changes you want to commit. This command tells Git which files you want to include in the next commit.....</p>
 
        
     </article>
@@ -96,9 +97,9 @@ export default function Home() {
 </button>
 
           </div>
-         <div className='flex m-2 mt-5'>
-          <img className='w-1/2 h-full mr-1 mt-5 rounded-md object-cover'  src="./github-img.jpg" alt="CodeX" />
-          <img className='w-1/2 h-full ml-1  rounded-md ' src="./github-push.jpg" alt="CodeX" />
+         <div className='hidden md:flex md:flex-col xl:flex-row m-2 mt-5'>
+          <img className='xl:w-1/2 xl:h-full md:w-full md:h-1/2 xl:mr-1 mt-5 rounded-md object-cover'  src="./github-img.jpg" alt="CodeX" />
+          <img className='xl:w-1/2 xl:h-full md:w-full md:h-1/2 xl:ml-1 mt-1 xl:mt-0 rounded-md ' src="./github-push.jpg" alt="CodeX" />
           </div>
            
          </div>
@@ -108,9 +109,9 @@ export default function Home() {
          
 <hr className='m-7 mt-9 border-dotted border-[#908b8b] cursor-pointer hover:border-red-500 duration-500' />
         <div className='flex  mb-5 md:mb-9 lg:mb-16'>
-          <div className='flex m-2 mt-5 mr-5'>
-          <img className='w-1/2 h-full mr-1 rounded-md ' src="./c++new.avif" alt="CodeX" />
-          <img className='w-1/2 h-full ml-1 mt-5 rounded-md' src="./home-page-2.jpg" alt="CodeX" />
+          <div className='hidden md:flex md:flex-col xl:flex-row m-2 mt-5 mr-5'>
+          <img className='xl:w-1/2 xl:h-full md:w-full md:h-1/2 xl:mr-1 rounded-md ' src="./c++new.avif" alt="CodeX" />
+          <img className='xl:w-1/2 xl:h-full md:w-full md:h-1/2 xl:ml-1 xl:mt-5 md:mt-1 rounded-md' src="./home-page-2.jpg" alt="CodeX" />
           </div>
           
           <div  className='m-2'>

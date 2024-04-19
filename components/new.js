@@ -25,12 +25,12 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-[#F8F8FF] fixed w-full top-0 z-50">
+    <header className={`bg-[#F8F8FF] fixed w-full top-0 z-${mobileMenuOpen?0:50}`}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Solar Power Predictor</span>
-            <img className="h-8 w-auto" src="./solar-power-predictor-high-resolution-logo-black-transparent.png" alt="SPP" />
+            <span className="sr-only">CodeX</span>
+            <img className="h-8 w-auto" src="./cdex-high-resolution-logo.png" alt="CodeX" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -58,16 +58,16 @@ export default function Example() {
           
         </Popover.Group>  
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog as="div" className="lg:hidden " open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Solar Power Predictor</span>
+              <span className="sr-only">CodeX</span>
               <img
                 className="h-8 w-auto"
-                src="./solar-power-predictor-high-resolution-logo-black-transparent.png"
-                alt="SPP"
+                src="./cdex-high-resolution-logo.png"
+                alt="CodeX"
               />
             </Link>
             <button
