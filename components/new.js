@@ -25,7 +25,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className={`bg-[#F8F8FF] fixed w-full top-0 z-${mobileMenuOpen?0:50}`}>
+    <header className={`bg-[#F8F8FF] fixed w-full top-0 ${mobileMenuOpen?'z-0':'z-50'} `}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
@@ -47,7 +47,7 @@ export default function Example() {
           {
           navitem.map((navitem)=>{
            
-            return <Link  key={navitem.id} href={navitem.link} className="    hover:text-emerald-500  font-semibold text-1xl leading-6 mx-6 text-gray-900 " >
+            return <Link  key={navitem.id} href={navitem.link} className="    hover:text-emerald-500 target:text-red-600  font-semibold text-1xl leading-6 mx-6 text-gray-900 " >
             {navitem.name}
           </Link>
         

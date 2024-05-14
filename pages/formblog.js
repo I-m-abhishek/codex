@@ -6,7 +6,10 @@ import React from 'react'
 const formblog = () => {
   return (
   // <Blogform/>
-  <Dialogbox/>
+  // <Dialogbox />
+  <>
+  "hello"
+  </>
   )
 }
 
