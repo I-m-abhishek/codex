@@ -59,7 +59,7 @@ function Snap({msg}) {
                 </div>
                 <div className=" p-1 pt-0 group relative max-h-40 max-w-80  sm:max-h-48 sm:max-w-96">
                   <h3 className="line-clamp-1 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <Link href={`http://localhost:3000/blogposts/${encodeURIComponent(recentBlogs._id)}`}>
+                    <Link href={`/blogposts/${encodeURIComponent(recentBlogs._id)}`}>
                       <span className="absolute inset-0" />
                       {recentBlogs.title}
                     </Link>
