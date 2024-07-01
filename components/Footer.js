@@ -17,7 +17,7 @@ const Footer = () => {
                 setError('Input cannot be empty');
                 return;
               }
-            const response = await fetch('http://localhost:3000/api/subscriber', {
+            const response = await fetch('/api/subscriber', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

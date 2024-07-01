@@ -30,7 +30,7 @@ function Snap({msg}) {
         !errr && recentBlogs.length!=0 ? (
 
     
-      <div className='flex flex-col p-1 sm:p-2 m-1 mb-0 lg:p-10 sm:pt-0 sm:m-10 sm:mb-0 sm:mt-0'>
+      <div className=' flex flex-col p-1 sm:p-2 m-1 mb-0 lg:p-10 sm:pt-0 sm:m-10 sm:mb-0 sm:mt-0'>
        <div className='flex justify-center items-center  '>
          <p className='dark:text-black leading-normal text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-semibold bg-[#f0f2f7] mb-3 p-3 pt-2 pb-3 md:pl-5 md:pr-5 rounded-full '>
             Our Recent Blogs
