@@ -44,7 +44,7 @@ const Slug = () => {
         <div className=' sm:pl-4 sm:pr-4 xl:pl-20 xl:pr-20 flex flex-col md:flex-row p-3'>
           <div className='flex flex-col mt-5 basis-3/5'>
             {/* <div className='aspect-video object-cover'> */}
-            <img className='rounded-2xl aspect-video object-cover  m-5 ' src={blogdetails.titleimgurl} alt=" Coding Blogs" />
+            <img className='rounded-2xl aspect-video object-cover  m-5 ' src={blogdetails.titleimgurl} alt="Coding Blogs" />
             {/* </div> */}
             <span className=' ml-5 leading-normal text-start font-serif text-4xl text-black' >{blogdetails.title}</span>
            </div>
@@ -54,7 +54,7 @@ const Slug = () => {
                 <div className='flex justify-start w-full items-start md:p-3 md:pt-0 md:pb-0'>
                 <span className='bg-[#a99f9f] pl-1 pr-1 md:pl-4 md:pr-4  border-spacing-4 rounded-xl p-1 font-bold text-xl'>{blogdetails.categoryTitle}</span>
                 </div>
-                <p className='text-start  font-serif text-xl text-black pt-1 md:p-3 ' >{blogdetails.description} </p>
+                <p className='whitespace-pre-wrap text-start  font-serif text-xl text-black pt-1 md:p-3 ' >{blogdetails.description} </p>
                 
               </div>
               <div className='flex flex-col '>
@@ -79,7 +79,7 @@ const Slug = () => {
        </div>
        {/* <hr /> */}
       <div  className='p-2 lg:p-10 lg:pb-0 pt-0 lg:pt-0 '>
-        <p className=' p-4 lg:p-10  m-1 sm:m-10  font-mono text-justify bg-gray-300/40 dark:bg-gray-800/30'>
+        <p className='whitespace-pre-wrap p-4 lg:p-10  m-1 sm:m-10  font-mono text-justify bg-gray-300/40 dark:bg-gray-800/30'>
           {blogdetails.content}
         </p>
       </div>

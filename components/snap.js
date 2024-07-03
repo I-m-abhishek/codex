@@ -44,7 +44,7 @@ function Snap({msg}) {
         
   <article key={recentBlogs._id} className=" bg-[#F8F8FF] rounded-xl flex max-w-xl flex-col items-start justify-between">
                 <div className=' h-40 w-80 sm:h-48 sm:w-96' >
-                <img className=" sm:max-h-48 sm:max-w-96 h-full w-full object-cover rounded-xl " src={recentBlogs.titleimgurl} alt="Blogs" />
+                <img className=" sm:max-h-48 sm:max-w-96 h-full w-full object-cover rounded-xl " src={recentBlogs.titleimgurl} alt="Coding Blogs" />
                 </div>
                 <div className="p-1 pt-0 flex items-center gap-x-4 text-xs max-h-48 max-w-96">
                 <time dateTime={recentBlogs.datetime1} className="text-gray-500">

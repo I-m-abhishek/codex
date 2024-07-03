@@ -92,7 +92,7 @@ export default function Home() {
        
     </article>
 <button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white   font-semibold p-1'> 
-  <a href="">Read More</a>
+  <a href="https://codex-world.vercel.app/blogposts/6683ba3acc17d4400fac9b3f">Read More</a>
 </button>
 
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
 
 
 <button className='rounded-md bg-[#364de7] hover:bg-[#3247d3] active:bg-[#3d56f9] text-white   font-semibold p-1'> 
-  <a href="">Read More</a>
+  <a href="https://codex-world.vercel.app/blogposts/6684e8009fac78c954781716">Read More</a>
 </button>
           </div>
           
