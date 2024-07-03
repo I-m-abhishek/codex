@@ -44,7 +44,7 @@ const Slug = () => {
         <div className=' sm:pl-4 sm:pr-4 xl:pl-20 xl:pr-20 flex flex-col md:flex-row p-3'>
           <div className='flex flex-col mt-5 basis-3/5'>
             {/* <div className='aspect-video object-cover'> */}
-            <img className='rounded-2xl aspect-video object-cover  m-5 ' src={blogdetails.titleimgurl} alt="Coding Blogs" />
+            <img className='rounded-2xl aspect-video object-cover  m-5 ' src={blogdetails.titleimgurl} alt="Coding Blogs" loading="lazy" onError={(e) => { e.target.src = '/errorimg.jpg' }} />
             {/* </div> */}
             <span className=' ml-5 leading-normal text-start font-serif text-4xl text-black' >{blogdetails.title}</span>
            </div>
@@ -62,10 +62,10 @@ const Slug = () => {
                 <p className='mt-2 md:m-8 md:mb-0 md:mt-2 mb-0 font-semibold text-2xl'>Published on- {blogdetails.date1}</p>
                 </div>
                 <div className="m-2 ml-0 md:m-8 md:mt-2 flex items-center justify-start gap-x-4">
-                  <img src={blogdetails.authorImageUrl} alt="Author Image" className="h-10 w-10 rounded-full bg-gray-50" />
+                  <img src={blogdetails.authorImageUrl} alt="Author Image" loading="lazy" onError={(e) => { e.target.src = '/errorauthor.jpg' }} className="h-10 w-10 rounded-full bg-gray-50" />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-black text-3xl">
-                      <Link href="/">
+                      <Link href="#">
                         <span className="absolute" />
                         {blogdetails.authorName}
                       </Link>

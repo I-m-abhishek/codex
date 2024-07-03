@@ -44,14 +44,14 @@ function Snap({msg}) {
         
   <article key={recentBlogs._id} className=" bg-[#F8F8FF] rounded-xl flex max-w-xl flex-col items-start justify-between">
                 <div className=' h-40 w-80 sm:h-48 sm:w-96' >
-                <img className=" sm:max-h-48 sm:max-w-96 h-full w-full object-cover rounded-xl " src={recentBlogs.titleimgurl} alt="Coding Blogs" />
+                <img className=" sm:max-h-48 sm:max-w-96 h-full w-full object-cover rounded-xl " src={recentBlogs.titleimgurl} alt="Coding Blogs" loading="lazy" onError={(e) => { e.target.src = '/errorimg.jpg' }} />
                 </div>
                 <div className="p-1 pt-0 flex items-center gap-x-4 text-xs max-h-48 max-w-96">
                 <time dateTime={recentBlogs.datetime1} className="text-gray-500">
                     {recentBlogs.date1}
                   </time>
                   <a
-                    href="/"
+                    href={`/blogposts/${encodeURIComponent(recentBlogs._id)}`}
                     className="line-clamp-1 mt-1 max-h-40 max-w-80 sm:max-w-96 sm:max-h-48 relative z-10 rounded-full bg-gray-300 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
                   >
                     {recentBlogs.categoryTitle}
@@ -67,10 +67,10 @@ function Snap({msg}) {
                   <p className="line-clamp-1 text-sm leading-6 text-gray-600">{recentBlogs.description}</p>
                 </div>
                 <div className="p-1 pt-0 max-h-40 max-w-80  sm:max-h-48 sm:max-w-96 relative mt-2 flex items-center gap-x-4">
-                  <img src={recentBlogs.authorImageUrl} alt="" className="h-10 w-10 rounded-full bg-gray-50" />
+                  <img src={recentBlogs.authorImageUrl} alt="Author" loading="lazy" onError={(e) => { e.target.src = '/errorauthor.jpg' }} className="h-10 w-10 rounded-full bg-gray-50" />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-gray-900">
-                      <Link href= "/">
+                      <Link href={`/blogposts/${encodeURIComponent(recentBlogs._id)}`}>
                         <span className="absolute inset-0" />
                         {recentBlogs.authorName}
                       </Link>
