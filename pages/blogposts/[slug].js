@@ -44,9 +44,9 @@ const Slug = () => {
         <div className=' sm:pl-4 sm:pr-4 xl:pl-20 xl:pr-20 flex flex-col md:flex-row p-3'>
           <div className='flex flex-col mt-5 basis-3/5'>
             {/* <div className='aspect-video object-cover'> */}
-            <img className='rounded-2xl aspect-video object-cover  m-5 ' src={blogdetails.titleimgurl} alt="Coding Blogs" loading="lazy" onError={(e) => { e.target.src = '/errorimg.jpg' }} />
+            <img className='rounded-2xl aspect-video object-cover m-2 md:m-5 ' src={blogdetails.titleimgurl} alt="Coding Blogs" loading="lazy" onError={(e) => { e.target.src = '/errorimg.jpg' }} />
             {/* </div> */}
-            <span className=' ml-5 leading-normal text-start font-serif text-4xl text-black' >{blogdetails.title}</span>
+            <span className=' ml-5 leading-normal text-start font-serif text-2xl md:text-4xl text-black' >{blogdetails.title}</span>
            </div>
 
            <div className=' flex flex-col basis-2/5  m-5'>
