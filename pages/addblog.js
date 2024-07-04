@@ -1,6 +1,6 @@
 import Dialogbox from '@/components/Dialogbox';
 import React, { useRef, useState } from 'react';
-
+import Head from 'next/head';
 
 // import file save and profile picture saver etc... 
 // check full website
@@ -81,6 +81,9 @@ const Addblog = () => {
 
   return (
     <>
+  <Head>
+        <title>CodeX - Add Blog</title>
+  </Head>
     <div className='bg-cover bg-white p-1 sm:pl-10 sm:pr-10 md:pl-20 md:pr-20 lg:pl-56 lg:pr-56'
     style={{
 

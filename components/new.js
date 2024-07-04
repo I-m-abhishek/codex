@@ -30,7 +30,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">CodeX</span>
-            <img className="h-8 w-auto" src="./cdex-high-resolution-logo.png" alt="CodeX" />
+            <img className="h-8 w-auto" src="./cdex-high-resolution-logo.png" alt="CodeX"  />
           </Link>
         </div>
         <div className="flex lg:hidden">

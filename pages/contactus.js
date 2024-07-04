@@ -2,6 +2,7 @@
 import { React, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import {XMarkIcon} from '@heroicons/react/24/outline'
+import Head from 'next/head';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -74,6 +75,10 @@ function contact() {
 
 
   return (
+    <>
+  <Head>
+        <title>CodeX - Contact US</title>
+  </Head>
     <div
         className="bg-cover p-2 sm:p-24 sm:pt-1 sm:pb-1 "
         style={{
@@ -291,7 +296,7 @@ Oops! It seems there is an error. Please try again later.
     </div>
     
 
-  )
+  </>)
 }
 
 export default contact
